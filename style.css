@@ -670,11 +670,12 @@ testimonial-item p{
 }
 
 
-@media(max-width:895px){
-    #menu-icon{
+@media(max-width: 895px) {
+    #menu-icon {
         display: block;
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
         top: 100%;
         right: 0;
@@ -685,37 +686,48 @@ testimonial-item p{
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: none;
+        display: none; /* Inicia o menu oculto */
     }
-    .navbar a{
+
+    .navbar.active {
+        display: block; /* Exibe o menu quando a classe 'active' for adicionada */
+    }
+
+    .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
         color: white;
     }
-    .home{
+
+    .home {
         flex-direction: column-reverse;
         margin: 5rem 4rem;
     }
 
-    .home-content h3{
+    .home-content h3 {
         font-size: 2.6rem;
     }
-    .home-content h1{
+
+    .home-content h1 {
         font-size: 8rem;
         margin-top: 3rem;
     }
-    .home-content p{
+
+    .home-content p {
         max-width: 600px;
         margin: 0 auto;
     }
-    .home-img img{
+
+    .home-img img {
         width: 56vw;
     }
-    .services h2{
-         margin-bottom: 3rem;
+
+    .services h2 {
+        margin-bottom: 3rem;
     }
-    .services-container{
-        grid-template-columns: repeat(1,1fr);
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
